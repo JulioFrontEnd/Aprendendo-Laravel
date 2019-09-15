@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contato',["uses"=>"ContatoController@index"]);
-Route::get('/sobre/{nome?}',["uses"=>"SobreController@index"]);
-Route::get('/tester',["uses"=>"TesterController@index","as"=>"Tester.index"]);
+Route::get('/contato',"ContatoController@index")->name("Contato");
+Route::get('/sobre/{nome?}',"SobreController@index");
+Route::get('/tester',"TesterController@index")->name("Tester");
 Route::post('/salvar',["uses"=>"TesterController@enviar","as"=>"Tester.enviar"]);
 Route::get('/registro',["uses"=>"TesterController@login","as"=>"Tester.login"]);
 Auth::routes();
