@@ -11,15 +11,12 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contato',"ContatoController@index")->name("Contato");
-Route::get('/sobre/{nome?}',"SobreController@index");
-Route::get('/tester',"TesterController@index")->name("Tester");
-Route::post('/salvar',["uses"=>"TesterController@enviar","as"=>"Tester.enviar"]);
-Route::get('/registro',["uses"=>"TesterController@login","as"=>"Tester.login"]);
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
+Route::fallback(function(){
+	return "<h1>error</h1>";
+});
