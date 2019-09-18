@@ -15,7 +15,15 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('main');
+
+Route::get('/protegido/{id?}', function(){
+	return view('protegido');
+})->middleware('contato');
+
+Route::get('/contato',function(){
+	return view('Tester.user');
+})->name('contato');
 
 Route::fallback(function(){
 	return "<h1>error</h1>";
