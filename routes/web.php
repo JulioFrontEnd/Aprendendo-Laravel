@@ -21,6 +21,8 @@ Route::get('/protegido/{id?}', function(){
 	return view('protegido');
 })->middleware('contato');
 
+Route::get('/fruta/{id?}','frutinha@index')->name('fruta');
+
 Route::get('/contato',function(){
 	return view('Tester.user');
 })->name('contato');
