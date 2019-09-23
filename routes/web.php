@@ -27,6 +27,10 @@ Route::get('/contato',function(){
 	return view('Tester.user');
 })->name('contato');
 
+Route::get('/git',function(){
+	return redirect()->away("https://www.github.com/juliofrontend/php-itego");
+})->name("git");
+
 Route::fallback(function(){
 	return "<h1>error</h1>";
 });
