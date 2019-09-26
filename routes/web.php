@@ -31,6 +31,12 @@ Route::get('/git',function(){
 	return redirect()->away("https://www.github.com/juliofrontend/php-itego");
 })->name("git");
 
+Route::get('/link',"frutinha@link")->name('link');
+
+Route::get('/lik',function(){
+	return view('link');
+})->name('lik');
+
 Route::fallback(function(){
 	return "<h1>error</h1>";
 });

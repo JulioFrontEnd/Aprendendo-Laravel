@@ -13,4 +13,9 @@ class frutinha extends Controller
     		return view('frutose');
     	}
     }
+
+    public function link(){
+    	return redirect()->route('lik');
+    }
+
 }
