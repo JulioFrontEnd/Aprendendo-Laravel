@@ -37,6 +37,9 @@ Route::get('/lik',function(){
 	return view('link');
 })->name('lik');
 
+Route::get('/user',"UserController@index");
+Route::get('/userA',"UserController@another");
+
 Route::fallback(function(){
 	return "<h1>error</h1>";
 });
