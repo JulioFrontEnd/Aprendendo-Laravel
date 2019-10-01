@@ -40,6 +40,8 @@ Route::get('/lik',function(){
 Route::get('/user',"UserController@index");
 Route::get('/userA',"UserController@another");
 
+Route::get('/validate','ValidateController@index');
+
 Route::fallback(function(){
 	return "<h1>error</h1>";
 });
