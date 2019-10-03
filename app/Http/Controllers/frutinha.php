@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class frutinha extends Controller
 {
@@ -16,6 +17,11 @@ class frutinha extends Controller
 
     public function link(){
     	return redirect()->route('lik');
+    }
+
+    public function log(){
+        Log::alert("O Usuario é um cara gente boa!");
+        echo "sucesso";
     }
 
 }

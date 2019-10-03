@@ -42,6 +42,8 @@ Route::get('/userA',"UserController@another");
 
 Route::get('/validate','ValidateController@index');
 
+Route::get('/log','frutinha@log');
+
 Route::fallback(function(){
 	return "<h1>error</h1>";
 });
